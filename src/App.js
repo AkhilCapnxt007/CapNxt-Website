@@ -5,17 +5,18 @@ import { Link, Route, Routes } from "react-router-dom";
 import Service from "./Components/Service";
 import Contact from "./Components/Contact";
 import AboutUs from "./Components/AboutUs";
-import Team_Career from "./Components/Team_Career";
+import DashBoard from "./Components/DashBoard"
+// import Team_Career from "./Components/Team_Career";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/service" element={<Service />} />
+        <Route path="/" element={<DashBoard />} />
+        {/* <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/team" element={<Team_Career />} />
+        <Route path="/about" element={<AboutUs />} /> */}
+        {/* <Route path="/team" element={<Team_Career />} /> */}
         <Route
           path="*"
           element={

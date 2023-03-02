@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap");
+
+:root {
+  --header-height: 0;
+
+  /*========== Colors ==========*/
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: #000000;
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.75rem;
+  --smaller-font-size: 0.5rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.9rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* ==== BASE ==== */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/* RESUSABLE CLASSES */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: 500;
+}
+h1 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+ul {
+  list-style: none;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+#form {
+  width: 45vw;
+  /* border: 1px solid black; */
+}
+.Contact{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vw;
+}
+
+.column {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.row div {
+  margin: 0.2vw 0vw;
+}
+.row div input {
+  border: none;
+  border-bottom: 1.8px solid gray;
+  width: 40vw;
+  padding: 0.3vw 0.6vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+}
+.row div li {
+  font-size: 1.5vw;
+  margin-top: 1.8vw;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+.Submitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3.5vw;
+}
+.Submitbtn button {
+  padding: 0.2vw 0.5vw;
+  font-size: 1.2vw;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+.Heading {
+  /* width: 50vw; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-top: 2.5vw;
+  margin-left: 4.5vw;
+}
+.Heading h1 {
+  font-size: 2.6vw;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(90deg, #579d9f, #121729 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 80%;
+  width: 45vw;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 100%;
+  width: 100%;
+}

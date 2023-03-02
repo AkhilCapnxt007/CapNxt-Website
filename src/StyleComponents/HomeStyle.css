@@ -112,6 +112,7 @@ a:focus {
 img {
   max-width: 100%;
   height: auto;
+  cursor: pointer;
 }
 .Universal{
   /* height: 100vw; */
@@ -124,13 +125,13 @@ img {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: white;
-  height: 5.5vw;
+  background-color: whitesmoke;
+  height: 5vw;
   transition: height 0.3s;
   padding: 0vw 2vw;
 }
 .Navbar:hover {
-  height: 6.5vw;
+  height: 6vw;
   transition-timing-function: linear;
 }
 .Navbar .logo img {
@@ -155,7 +156,7 @@ img {
   margin: 0vw 0.8vw;
   width: 8vw;
   padding: 0.5vw;
-  height: 6.5vw;
+  height: 6vw;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   transition: background-color  0.3s , height 0.2s , font-weight 0.2s;
@@ -163,10 +164,11 @@ img {
 .links:hover{
   /* font-family: 'Lobster', cursive; */
   font-weight: 700;
-  height: 6.5vw;
-  background-color:whitesmoke;
+  height: 6vw;
+  /* background-color:white; */
   font-size: 1.2vw;
   transition-timing-function: linear;
+
 }
 .Footer{
   display: flex;
@@ -338,8 +340,24 @@ img {
     font-weight: 600;
     /* border-bottom: 1px solid #c1c1c1; */
   }
-
   #menuToggle input:checked ~ ul {
     transform: none;
   }
+}
+
+/* Home styling over here */
+.HomeContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.HomeContainer .Quotation{
+  font-size: 3.5vw;
+}
+
+#video{
+  /* position: fixed; */
+  z-index: -1;
+  width: 25vw;
 }
