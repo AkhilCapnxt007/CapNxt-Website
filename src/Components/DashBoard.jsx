@@ -80,6 +80,18 @@ function DashBoard() {
     document.querySelector("#menuToggle input").checked = false;
   }
 
+ // code for closing side nav bar on clicking anywhere
+ document.addEventListener("click", function (event) {
+  var ignoreElement = document.querySelector("#menuToggle");
+  // console.log(ignoreElement)
+  if (ignoreElement !== null) {
+    var clickElement = ignoreElement.contains(event.target);
+    if (!clickElement) {
+      document.querySelector("#menuToggle input").checked = false;
+    }
+  }
+});
+
   return (
     <>
       {/* Navbar from heree */}
@@ -89,6 +101,10 @@ function DashBoard() {
             <img src={capnxtHeading} alt="" onClick={ShowHome} />
           </div>
           <nav className="NavLink">
+          <li className="links" onClick={ShowHome}>
+              Home
+            </li>
+
             <li className="links" onClick={ShowServices}>
               Service
             </li>
@@ -103,15 +119,15 @@ function DashBoard() {
             <li className="links" onClick={ShowProjects}>
               Projects
             </li>
-            {/* <li className="links" onClick={ShowProjects}>
+            <li className="links" onClick={ShowContact}>
               Contact
-            </li> */}
+            </li>
           </nav>
-          <nav className="contact">
+          {/* <nav className="contact">
             <li className="links" onClick={ShowContact}>
               Contact us
             </li>
-          </nav>
+          </nav> */}
         </header>
         <header className="mobileView">
           <nav>
@@ -202,7 +218,7 @@ function DashBoard() {
 
           {}
         </section>
-        {/* <section className="Footer">
+        <section className="Footer">
           <div className="logo">
             <img src={capnxtLogWhite} alt="error loding" />
           </div>
@@ -221,7 +237,7 @@ function DashBoard() {
             </li>
           </div>
           <div className="copyright">&#169; CapNxt Global Pvt Ltd</div>
-        </section> */}
+        </section>
       </section>
     </>
   );

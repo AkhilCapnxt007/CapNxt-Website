@@ -1,0 +1,1 @@
+navbar and homepage styling are in same css file HomeStyle.css 
