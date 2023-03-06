@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../StyleComponents/HomeStyle.css";
+import "../StyleComponents/FooterStyle.css";
+
 import capnxtHeading from "../Assets/Images/capnxtLogoHeading.png";
 import capnxtLogWhite from "../Assets/Images/Capnxt-Logo-Final--White.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -12,7 +14,13 @@ import Service from "./Service";
 import Projects from "./Projects";
 import OurPeople from "./OurPeople";
 import Contact from "./Contact";
+import instagram from "../Assets/Images/instagram.svg";
+import facebook from "../Assets/Images/faceBook.svg";
+import linkedIn from "../Assets/Images/linkedIn.svg";
 import Home from "./Home";
+import AddressLogo from "../Assets/Images/addressLogo.svg";
+import PhoneLogo from "../Assets/Images/mobileLogo.svg";
+import EmailLogo from "../Assets/Images/EmailLogo.svg";
 
 function DashBoard() {
   const [HomePage, setHomePage] = useState(true);
@@ -80,17 +88,17 @@ function DashBoard() {
     document.querySelector("#menuToggle input").checked = false;
   }
 
- // code for closing side nav bar on clicking anywhere
- document.addEventListener("click", function (event) {
-  var ignoreElement = document.querySelector("#menuToggle");
-  // console.log(ignoreElement)
-  if (ignoreElement !== null) {
-    var clickElement = ignoreElement.contains(event.target);
-    if (!clickElement) {
-      document.querySelector("#menuToggle input").checked = false;
+  // code for closing side nav bar on clicking anywhere
+  document.addEventListener("click", function (event) {
+    var ignoreElement = document.querySelector("#menuToggle");
+    // console.log(ignoreElement)
+    if (ignoreElement !== null) {
+      var clickElement = ignoreElement.contains(event.target);
+      if (!clickElement) {
+        document.querySelector("#menuToggle input").checked = false;
+      }
     }
-  }
-});
+  });
 
   return (
     <>
@@ -101,7 +109,7 @@ function DashBoard() {
             <img src={capnxtHeading} alt="" onClick={ShowHome} />
           </div>
           <nav className="NavLink">
-          <li className="links" onClick={ShowHome}>
+            <li className="links" onClick={ShowHome}>
               Home
             </li>
 
@@ -219,24 +227,57 @@ function DashBoard() {
           {}
         </section>
         <section className="Footer">
-          <div className="logo">
-            <img src={capnxtLogWhite} alt="error loding" />
+          <div className="socailMedia">
+            <img className="CapNxtLogo" src={capnxtLogWhite} alt="error loading in image" />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+              nesciunt numquam ipsum iste. Illo id quia optio enim voluptatem.
+              Dolores exercitationem odit.
+            </p>
+            <div className="socailMediaLinks">
+              <a href="#">
+                <img src={linkedIn} alt="error loading image" />
+              </a>
+              <a href="#">
+                <img src={facebook} alt="error loading image" />
+              </a>
+              <a href="#">
+                <img src={instagram} alt="error loading image" />
+              </a>
+            </div>
           </div>
-          <div className="SocialMedia">
-            <li>
-              <InstagramIcon />
-            </li>
-            <li>
-              <FacebookOutlinedIcon />
-            </li>
-            <li>
-              <LinkedInIcon />
-            </li>
-            <li>
-              <TwitterIcon />
-            </li>
-          </div>
-          <div className="copyright">&#169; CapNxt Global Pvt Ltd</div>
+          <section className="Links">
+            <div className="Navlinks">
+              <h1>Links</h1>
+              <p onClick={ShowAbout}>About Us</p>
+              <p onClick={ShowProjects}>Projects</p>
+              <p onClick={ShowServices}>Our Services</p>
+              <p onClick={ShowContact}>Contact Us</p>
+            </div>
+            <div className="ContactDetails">
+              <section className="contactLinks">
+                <h1>Contact Info</h1>
+                <div>
+                  <img src={AddressLogo} alt="error loading Image" />
+                  <span>
+                    95, Lumbini Avenue, Gachibowli, Hyderabad, <br />
+                    Telangana 500032
+                  </span>
+                </div>
+
+                <div>
+                  <img src={PhoneLogo} alt="error loading Image" />
+                  <span>+91 7981516766</span>
+                </div>
+
+                <div>
+                  <img src={EmailLogo} alt="error loading Image" />
+                  <span>info@capnxt.com</span>
+                </div>
+
+              </section>
+            </div>
+          </section>
         </section>
       </section>
     </>

@@ -171,37 +171,9 @@ img {
   font-size: 1.2vw;
   transition-timing-function: linear;
 }
-.Footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  margin-top: auto;
-}
 
-/* footer editing from here... */
-.Footer {
-  padding: 1vw 6vw;
-  background-color: black;
-}
-.Footer .logo {
-  width: 12vw;
-}
-.SocialMedia {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  /* background-color: red; */
-  width: 20vw;
-}
-.SocialMedia li {
-  color: white;
-  font-size: 2vw;
-}
-.copyright {
-  color: white;
-}
+
+/* making mobile view content navbar display to none ... */
 
 .mobileView {
   display: none;

@@ -1,0 +1,216 @@
+:root {
+  --header-height: 0;
+
+  /*========== Colors ==========*/
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: #000000;
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.75rem;
+  --smaller-font-size: 0.5rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.9rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* ==== BASE ==== */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/* RESUSABLE CLASSES */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: 500;
+}
+h1 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+ul {
+  list-style: none;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.Footer {
+  background-color: #182232;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 1vw 5vw;
+}
+.Footer .Links{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    text-align: left;
+}
+
+.socailMedia {
+  width: 40vw;
+  max-width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-align: left;
+  flex-direction: column;
+}
+.socailMedia p {
+  font-size: 1vw;
+  padding-bottom: 1.2vw;
+  width: 80%;
+}
+.socailMediaLinks {
+  display: flex;
+  width: 100%;
+}
+.socailMediaLinks a {
+  margin: 0vw 2vw;
+}
+.socailMediaLinks a img {
+  width: 2.5vw;
+}
+.CapNxtLogo {
+  width: 15vw;
+  padding: 1.2vw 0vw;
+}
+.Links .Navlinks{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    max-width: 25vw;
+    margin-bottom: auto;
+}
+.Links .Navlinks h1{
+    font-size: 1.8vw;
+    margin-bottom: 1vw;
+
+}
+.Links .Navlinks p{
+    font-size: 1.2vw;
+    margin: 0.3vw 0vw;
+    cursor: pointer;
+    width: fit-content;
+}
+.Links .Navlinks p:hover{
+    /* color: #006C71; */
+    color: gray;
+    transition-duration: 0.2s;
+}
+.ContactDetails{
+    width: 30vw;
+    max-width: 30vw;
+}
+.contactLinks{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+}
+.contactLinks div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.contactLinks div img{
+    width: 1.4vw;
+    margin: 0vw 0.8vw;
+}
+.contactLinks div{
+    margin: 1vw 0vw;
+}
+.contactLinks div span{
+    font-size: 1vw;
+}
+.contactLinks h1{
+    font-size: 1.8vw;
+    margin-bottom: 0.2vw;
+
+}
+
+
+

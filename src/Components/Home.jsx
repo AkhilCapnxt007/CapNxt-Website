@@ -114,7 +114,11 @@ function Home() {
               </div>
             </div>
             <div className="blogBox">
-              <img className="blogImg" src={BlogImgtwo} alt="blog image error" />
+              <img
+                className="blogImg"
+                src={BlogImgtwo}
+                alt="blog image error"
+              />
               <div className="time">
                 <img src={CalenderImg} alt="calender image error" />
                 <p>2 sep 2024</p>
@@ -129,7 +133,11 @@ function Home() {
               </div>
             </div>
             <div className="blogBox">
-              <img className="blogImg" src={BlogImgthree} alt="blog image error" />
+              <img
+                className="blogImg"
+                src={BlogImgthree}
+                alt="blog image error"
+              />
               <div className="time">
                 <img src={CalenderImg} alt="calender image error" />
                 <p>2 sep 2024</p>
@@ -152,16 +160,24 @@ function Home() {
           </header>
           <div className="imageContainer">
             <div className="imageBox">
-              <img src={clientOne} alt="clientOne" />
+              <a href="https://energon.in" target="_blank">
+                {" "}
+                <img src={clientOne} alt="clientOne" />
+              </a>
             </div>
             <div className="imageBox">
-              <img src={vaikhari} alt="clientOne" />
+              <a href="https://vaikharidigital.com/" target="_blank">
+                <img src={vaikhari} alt="clientOne" />
+              </a>
             </div>
             <div className="imageBox">
               <img src={clientThree} alt="clientOne" />
             </div>
             <div className="imageBox">
-              <img src={clientFour} alt="clientOne" />
+              <a href="https://prakrutischool.in" target="_blank">
+                {" "}
+                <img src={clientFour} alt="clientOne" />
+              </a>
             </div>
           </div>
         </div>
