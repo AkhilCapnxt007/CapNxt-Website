@@ -138,7 +138,8 @@ img {
 }
 .socailMedia p {
   font-size: 1vw;
-  padding-bottom: 1.2vw;
+  /* padding-bottom: 1.2vw; */
+  margin: 2.5vw 0vw;
   width: 80%;
 }
 .socailMediaLinks {
@@ -153,7 +154,7 @@ img {
 }
 .CapNxtLogo {
   width: 15vw;
-  padding: 1.2vw 0vw;
+  margin-top: 1vw;
 }
 .Links .Navlinks{
     width: 25vw;
@@ -163,19 +164,19 @@ img {
     margin-bottom: auto;
 }
 .Links .Navlinks h1{
-    font-size: 1.8vw;
+    font-size: 2vw;
     margin-bottom: 1vw;
 
 }
 .Links .Navlinks p{
-    font-size: 1.2vw;
-    margin: 0.3vw 0vw;
+    font-size: 1.1vw;
+    margin: 0.5vw 0vw;
     cursor: pointer;
     width: fit-content;
 }
 .Links .Navlinks p:hover{
-    /* color: #006C71; */
-    color: gray;
+    color: #006C71;
+    /* color: gray; */
     transition-duration: 0.2s;
 }
 .ContactDetails{
@@ -200,14 +201,15 @@ img {
     width: 1.4vw;
     margin: 0vw 0.8vw;
 }
+
 .contactLinks div{
-    margin: 1vw 0vw;
+    margin: 1.2vw 0vw;
 }
 .contactLinks div span{
     font-size: 1vw;
 }
 .contactLinks h1{
-    font-size: 1.8vw;
+    font-size: 2vw;
     margin-bottom: 0.2vw;
 
 }

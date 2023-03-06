@@ -239,6 +239,9 @@ img {
   align-items: center;
   width: 50vw;
 }
+.aboutImg img{
+  width:30vw;
+}
 
 .aboutContent {
   display: flex;
@@ -287,6 +290,7 @@ img {
   color: #006c71;
   font-weight: 700;
   margin-bottom: 0.2;
+  font-size: 0.8vw;
 }
 .HomeServices header h1,
 .HomeTech header h1 {
@@ -305,10 +309,12 @@ img {
   margin: 0vw 6vw;
   /* background-color: whitesmoke; */
   width: 16vw;
-}
-.HomeServices .box:hover {
   box-shadow: 2px 2px 100px 4px rgba(0, 0, 0, 0.25);
-  transition-duration: 0.4s;
+}
+
+.HomeServices .box:hover {
+  border-top: 5px solid #182232;
+  transition-duration: 0.2s;
 }
 .serviceImages {
   display: flex;
@@ -327,6 +333,19 @@ img {
   color: #006c71;
   margin-top: 0.2vw;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-self: center;
+}
+
+.box .link img{
+  width: 0vw;
+  margin-left: 0.5vw;
+  transition: width 0.2s;
+}
+.HomeServices .box:hover + .box .link img{
+  width: 0.8vw;
 }
 
 /* Technologies Editing from here... */

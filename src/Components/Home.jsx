@@ -14,6 +14,7 @@ import clientTwo from "../Assets/Images/clientTwo.svg";
 import clientThree from "../Assets/Images/ClientThree.svg";
 import clientFour from "../Assets/Images/clientFour.svg";
 import vaikhari from "../Assets/Images/vaikhari.svg";
+import learnMore from "../Assets/Images/LearnMoreLogo.svg";
 
 function Home() {
   // we work to give results but  not apologies
@@ -65,19 +66,19 @@ function Home() {
             <div className="box">
               <img src={serviceImgOne} alt="servie Image" />
               <p>Web Development</p>
-              <p className="link"> Learn More</p>
+              <p className="link"> Learn More <img src={learnMore} alt="" /></p>
             </div>
 
             <div className="box">
               <img src={serviceImgTwo} alt="servie Image" />
               <p>Data Science</p>
-              <p className="link"> Learn More</p>
+              <p className="link"> Learn More <img src={learnMore} alt="" /></p>
             </div>
 
             <div className="box">
               <img src={serviceImgOne} alt="servie Image" />
               <p>Web Development</p>
-              <h1 className="link"> Learn More</h1>
+              <h1 className="link"> Learn More <img src={learnMore} alt="" /></h1>
             </div>
           </section>
         </div>
@@ -170,10 +171,10 @@ function Home() {
                 <img src={vaikhari} alt="clientOne" />
               </a>
             </div>
-            <div className="imageBox">
+            <div className="imageBox" style={{marginTop:"-1vw"}}>
               <img src={clientThree} alt="clientOne" />
             </div>
-            <div className="imageBox">
+            <div className="imageBox" style={{marginTop:"-1vw"}}>
               <a href="https://prakrutischool.in" target="_blank">
                 {" "}
                 <img src={clientFour} alt="clientOne" />
