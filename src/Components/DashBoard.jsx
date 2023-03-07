@@ -10,7 +10,8 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import AboutUs from "./AboutUs";
-import Service from "./Service";
+import DataService from "./DataService";
+import WebService from "./WebService";
 import Projects from "./Projects";
 import OurPeople from "./OurPeople";
 import Contact from "./Contact";
@@ -26,7 +27,8 @@ function DashBoard() {
   const [HomePage, setHomePage] = useState(true);
   const [AboutPage, setAboutPage] = useState(false);
   const [PeoplePage, setPeoplePage] = useState(false);
-  const [ServicesPage, setServicesPage] = useState(false);
+  const [DataServicePage, setDataServicePage] = useState(false);
+  const [WebServicePage, setWebServicePage] = useState(false);
   const [ProjectsPage, setProjectsPage] = useState(false);
   const [ContactPage, setContactPage] = useState(false);
 
@@ -34,35 +36,47 @@ function DashBoard() {
     setHomePage(true);
     setAboutPage(false);
     setPeoplePage(false);
-    setServicesPage(false);
+    setDataServicePage(false);
     setProjectsPage(false);
     setContactPage(false);
     document.querySelector("#menuToggle input").checked = false;
   }
 
+
   function ShowAbout() {
     setHomePage(false);
     setAboutPage(true);
     setPeoplePage(false);
-    setServicesPage(false);
+    setDataServicePage(false);
     setProjectsPage(false);
     setContactPage(false);
     document.querySelector("#menuToggle input").checked = false;
   }
-  function ShowServices() {
+
+  function ShowDataServices() {
     setHomePage(false);
     setAboutPage(false);
     setPeoplePage(false);
-    setServicesPage(true);
+    setDataServicePage(true);
     setProjectsPage(false);
     setContactPage(false);
     document.querySelector("#menuToggle input").checked = false;
   }
+  function ShowWebServices(){
+    setHomePage(false);
+    setAboutPage(false);
+    setPeoplePage(false);
+    setDataServicePage(true);
+    setProjectsPage(false);
+    setContactPage(false);
+    document.querySelector("#menuToggle input").checked = false;
+  }
+
   function ShowProjects() {
     setHomePage(false);
     setAboutPage(false);
     setPeoplePage(false);
-    setServicesPage(false);
+    setDataServicePage(false);
     setProjectsPage(true);
     setContactPage(false);
     document.querySelector("#menuToggle input").checked = false;
@@ -72,7 +86,7 @@ function DashBoard() {
     setHomePage(false);
     setAboutPage(false);
     setPeoplePage(false);
-    setServicesPage(false);
+    setDataServicePage(false);
     setProjectsPage(false);
     setContactPage(true);
     document.querySelector("#menuToggle input").checked = false;
@@ -82,7 +96,7 @@ function DashBoard() {
     setHomePage(false);
     setAboutPage(false);
     setPeoplePage(true);
-    setServicesPage(false);
+    setDataServicePage(false);
     setProjectsPage(false);
     setContactPage(false);
     document.querySelector("#menuToggle input").checked = false;
@@ -100,6 +114,16 @@ function DashBoard() {
     }
   });
 
+  const [selectedOption, setSelectedOption] = useState('Services');
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  if(selectedOption == "Data_Service"){
+    console.log("data now")
+  }
+
   return (
     <>
       {/* Navbar from heree */}
@@ -112,9 +136,16 @@ function DashBoard() {
             <li className="links" onClick={ShowHome}>
               Home
             </li>
-
-            <li className="links" onClick={ShowServices}>
-              Service
+            <li className="links">
+              <select
+                id="dropdown"
+                value={selectedOption}
+                onChange={handleOptionChange}
+              >
+                <option value="Services">Services</option>
+                <option value="Data_Service">Data Service</option>
+                <option value="Web_Service">Web Service</option>
+              </select>
             </li>
 
             <li className="links" onClick={ShowOurPeople}>
@@ -158,7 +189,7 @@ function DashBoard() {
                   <li onClick={ShowAbout}>About Us</li>
                 </Link>
                 <a href="#">
-                  <li onClick={ShowServices}>Services</li>
+                  <li onClick={ShowDataServices}>Services</li>
                 </a>
                 <a href="#">
                   <li onClick={ShowProjects}>Projects</li>
@@ -201,11 +232,18 @@ function DashBoard() {
             </>
           )}
 
-          {ServicesPage && (
+          {DataServicePage && (
             <>
-              <Service />
+              <DataService />
             </>
           )}
+          
+          {WebServicePage && (
+            <>
+              <WebService />
+            </>
+          )}
+
 
           {PeoplePage && (
             <>
@@ -228,7 +266,11 @@ function DashBoard() {
         </section>
         <section className="Footer">
           <div className="socailMedia">
-            <img className="CapNxtLogo" src={capnxtLogWhite} alt="error loading in image" />
+            <img
+              className="CapNxtLogo"
+              src={capnxtLogWhite}
+              alt="error loading in image"
+            />
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
               nesciunt numquam ipsum iste. Illo id quia optio enim voluptatem.
@@ -251,7 +293,7 @@ function DashBoard() {
               <h1>Links</h1>
               <p onClick={ShowAbout}>About Us</p>
               <p onClick={ShowProjects}>Projects</p>
-              <p onClick={ShowServices}>Our Services</p>
+              <p onClick={ShowDataServices}>Our Services</p>
               <p onClick={ShowContact}>Contact Us</p>
             </div>
             <div className="ContactDetails">
@@ -274,7 +316,6 @@ function DashBoard() {
                   <img src={EmailLogo} alt="error loading Image" />
                   <span>info@capnxt.com</span>
                 </div>
-
               </section>
             </div>
           </section>

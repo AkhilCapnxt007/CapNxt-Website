@@ -2,7 +2,7 @@
 // import "./App.css";
 import Home from "./Components/Home";
 import { Link, Route, Routes } from "react-router-dom";
-import Service from "./Components/Service";
+import Service from "./Components/DataService";
 import Contact from "./Components/Contact";
 import AboutUs from "./Components/AboutUs";
 import DashBoard from "./Components/DashBoard"
@@ -13,6 +13,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<DashBoard />} />
+        <Route path="/data" element={<Service />} />
+        
         {/* <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<AboutUs />} /> */}

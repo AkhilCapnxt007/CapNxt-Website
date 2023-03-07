@@ -154,15 +154,26 @@ img {
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-size: 1.2vw;
   margin: 0vw 0.8vw;
   width: 8vw;
   padding: 0.5vw;
   height: 6vw;
   cursor: pointer;
+  font-size: 1.2vw;
   font-family: "Poppins", sans-serif;
   transition: background-color 0.3s, height 0.2s, font-weight 0.2s;
 }
+.links select{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.1vw;
+  font-family: "Poppins", sans-serif;
+}
+.links select:active{
+  border: none;
+}
+
 .links:hover {
   /* font-family: 'Lobster', cursive; */
   font-weight: 700;
