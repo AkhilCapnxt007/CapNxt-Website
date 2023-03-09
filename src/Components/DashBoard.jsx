@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../StyleComponents/HomeStyle.css";
 import "../StyleComponents/FooterStyle.css";
 
@@ -24,6 +24,7 @@ import PhoneLogo from "../Assets/Images/mobileLogo.svg";
 import EmailLogo from "../Assets/Images/EmailLogo.svg";
 
 function DashBoard() {
+  const navigate = useNavigate();
   const [HomePage, setHomePage] = useState(true);
   const [AboutPage, setAboutPage] = useState(false);
   const [PeoplePage, setPeoplePage] = useState(false);
@@ -31,25 +32,43 @@ function DashBoard() {
   const [WebServicePage, setWebServicePage] = useState(false);
   const [ProjectsPage, setProjectsPage] = useState(false);
   const [ContactPage, setContactPage] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
+  
+  useEffect(()=>{
+    if(selectedOption === "Data_Service"){
+      ShowDataServices();
+      console.log("data page")
+    }else if(selectedOption === "Web_Service"){
+      console.log("service page")
+      ShowWebServices();
+    }else{
+      console.log("nothing selected")
+    }
+
+  },[selectedOption])
+
 
   function ShowHome() {
     setHomePage(true);
     setAboutPage(false);
     setPeoplePage(false);
     setDataServicePage(false);
+    setWebServicePage(false);
     setProjectsPage(false);
     setContactPage(false);
+    setSelectedOption("");
     document.querySelector("#menuToggle input").checked = false;
   }
-
 
   function ShowAbout() {
     setHomePage(false);
     setAboutPage(true);
     setPeoplePage(false);
     setDataServicePage(false);
+    setWebServicePage(false);
     setProjectsPage(false);
     setContactPage(false);
+    setSelectedOption("");
     document.querySelector("#menuToggle input").checked = false;
   }
 
@@ -60,15 +79,20 @@ function DashBoard() {
     setDataServicePage(true);
     setProjectsPage(false);
     setContactPage(false);
+    setWebServicePage(false);
+    setSelectedOption("");
     document.querySelector("#menuToggle input").checked = false;
   }
-  function ShowWebServices(){
+
+  function ShowWebServices() {
     setHomePage(false);
     setAboutPage(false);
     setPeoplePage(false);
-    setDataServicePage(true);
+    setDataServicePage(false);
+    setWebServicePage(true);
     setProjectsPage(false);
     setContactPage(false);
+    setSelectedOption("");
     document.querySelector("#menuToggle input").checked = false;
   }
 
@@ -78,7 +102,9 @@ function DashBoard() {
     setPeoplePage(false);
     setDataServicePage(false);
     setProjectsPage(true);
+    setWebServicePage(false);
     setContactPage(false);
+    setSelectedOption("");
     document.querySelector("#menuToggle input").checked = false;
   }
 
@@ -89,6 +115,8 @@ function DashBoard() {
     setDataServicePage(false);
     setProjectsPage(false);
     setContactPage(true);
+    setWebServicePage(false);
+    setSelectedOption("");
     document.querySelector("#menuToggle input").checked = false;
   }
 
@@ -99,6 +127,8 @@ function DashBoard() {
     setDataServicePage(false);
     setProjectsPage(false);
     setContactPage(false);
+    setWebServicePage(false);
+    setSelectedOption("");
     document.querySelector("#menuToggle input").checked = false;
   }
 
@@ -114,15 +144,10 @@ function DashBoard() {
     }
   });
 
-  const [selectedOption, setSelectedOption] = useState('Services');
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
-
-  if(selectedOption == "Data_Service"){
-    console.log("data now")
-  }
 
   return (
     <>
@@ -142,7 +167,7 @@ function DashBoard() {
                 value={selectedOption}
                 onChange={handleOptionChange}
               >
-                <option value="Services">Services</option>
+                <option value="">Services</option>
                 <option value="Data_Service">Data Service</option>
                 <option value="Web_Service">Web Service</option>
               </select>
@@ -237,13 +262,28 @@ function DashBoard() {
               <DataService />
             </>
           )}
-          
+
+          {/* {selectedOption === "Data_Service" && (
+            <>
+          {
+            console.log("data page")
+          }
+              <DataService />
+            </>
+          )}
+          {selectedOption === "Web_Service" && (
+            <>
+              {console.log("web page")}
+              <WebService />
+            </>
+          )} */}
+
+
           {WebServicePage && (
             <>
               <WebService />
             </>
           )}
-
 
           {PeoplePage && (
             <>

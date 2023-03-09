@@ -1,5 +1,6 @@
 import { fontSize } from "@mui/system";
 import React from "react";
+// import videoBackground from "../Assets/Videos/Logo-Rotate-2-.mp4";
 import videoBackground from "../Assets/Videos/Logo Rotate-1.mp4";
 import AboutImg from "../Assets/Images/aboutImg.svg";
 import serviceImgOne from "../Assets/Images/servicesImg.svg";
@@ -66,19 +67,28 @@ function Home() {
             <div className="box">
               <img src={serviceImgOne} alt="servie Image" />
               <p>Web Development</p>
-              <p className="link"> Learn More <img src={learnMore} alt="" /></p>
+              <p className="link">
+                {" "}
+                Learn More <img src={learnMore} alt="" />
+              </p>
             </div>
 
             <div className="box">
               <img src={serviceImgTwo} alt="servie Image" />
               <p>Data Science</p>
-              <p className="link"> Learn More <img src={learnMore} alt="" /></p>
+              <p className="link">
+                {" "}
+                Learn More <img src={learnMore} alt="" />
+              </p>
             </div>
 
             <div className="box">
               <img src={serviceImgOne} alt="servie Image" />
               <p>Web Development</p>
-              <h1 className="link"> Learn More <img src={learnMore} alt="" /></h1>
+              <h1 className="link">
+                {" "}
+                Learn More <img src={learnMore} alt="" />
+              </h1>
             </div>
           </section>
         </div>
@@ -171,10 +181,10 @@ function Home() {
                 <img src={vaikhari} alt="clientOne" />
               </a>
             </div>
-            <div className="imageBox" style={{marginTop:"-1vw"}}>
+            <div className="imageBox" style={{ marginTop: "-1vw" }}>
               <img src={clientThree} alt="clientOne" />
             </div>
-            <div className="imageBox" style={{marginTop:"-1vw"}}>
+            <div className="imageBox" style={{ marginTop: "-1vw" }}>
               <a href="https://prakrutischool.in" target="_blank">
                 {" "}
                 <img src={clientFour} alt="clientOne" />

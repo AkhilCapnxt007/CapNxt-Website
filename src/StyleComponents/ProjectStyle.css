@@ -111,143 +111,60 @@ img {
   height: auto;
   cursor: pointer;
 }
-
-.WebService header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: left;
-}
-.WebContent {
-  width: 48vw;
-  padding: 0vw 5.5vw 0vw 2vw;
-}
-.WebContent h1 {
-  font-size: 3.6vw;
-  color: rgba(24, 34, 50, 1);
-  padding: 1vw 0vw;
-}
-.WebContentImage {
-  padding: 3vw 3vw;
-}
-.WebContentImage img {
-  width: 30vw;
-}
-.WhatWeDo {
+.Projects header{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 5vw 0vw;
   text-align: center;
+  padding: 3vw 8vw 0vw;
 }
-.whatWeDoImage {
+
+.Projects header h1{
+  font-size: 6vw;
+  margin-bottom: auto;
+  margin-left: -7vw;
+  margin-top: 2.5vw;
+}
+.ProjectsCards{
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 47vw;
-  background-image: url("../Assets/Images/ServiceWhatWeDo.svg");
-  /* background-color: red; */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 40vw;
+  flex-wrap: wrap;
+  padding: 5vw 0vw;
 }
-.whatWeDoImage h1 {
-  font-size: 3.5vw;
-  padding-right: 5.5vw;
-}
-.WhatWeDoCards {
+.ProjectsCards .Card{
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
+  /* border: 1px solid black; */
+  box-shadow: 2px 2px 100px 4px rgb(0 0 0 / 25%);
+  width: 25vw;
+  max-width: 28vw !important;
+  border-radius: 1vw;
+  padding: 2vw;
+  margin: 2.5vw 2vw;
 }
-.WhatWeDoCards .card {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  text-align: left;
-  width: 45vw;
-  background-color: rgba(24, 34, 50, 1);
-  color: white;
-  cursor: pointer;
-  /* border: 1px solid red; */
-  border-radius: 50vw;
-  padding: 1vw 2.5vw;
-  margin: 2vw 0vw;
+.ProjectsCards .Card img{
+  padding: 2vw 0vw;
 }
-.WhatWeDoCards .card:hover {
-  background-color: white;
-  color: rgba(24, 34, 50, 1);
-  transition-duration: 0.3s;
-  border: 0.5px solid rgba(24, 34, 50, 1);
+.ProjectsCards .Card h1{
+  font-size: 2vw;
+  padding: 1.2vw 0vw;
 }
-.WhatWeDoCards .card:hover .WhatWeDoCards .card .CardContent {
-  border-right: 1px solid black;
-}
-
-.WhatWeDoCards .card .CardContent {
-  /* background-color: red; */
-  /* width: 80vw; */
-  padding: 0vw 0.5vw;
-  border-right: 1px solid rgba(255, 255, 255, 1);
-}
-.WhatWeDoCards .card h1 {
+.ProjectsCards .Card p{
+  color: rgba(60, 60, 60, 1);
   font-size: 1vw;
-  padding-bottom: 0.4vw;
-}
-.WhatWeDoCards .card p {
-  font-size: 0.8vw;
-}
-.CardImage {
-  /* background-color: white; */
-  /* margin: 1vw; */
-  margin-left: 1.5vw;
-}
-.CardImage img {
-  width: 5vw;
-}
-
-.WhatWeDoCards .CardOne {
-  margin-left: -18vw;
-  /* background-color: red; */
-}
-.WhatWeDoCards .CardTwo {
-  margin-left: -5vw;
-}
-
-.WhatWeDoCards .CardThree {
-  margin-left: -3vw;
-  margin-top: 5vw;
-  margin-bottom: -2vw;
-}
-
-.WhatWeDoCards .cardFour {
-  /* margin-bottom: -3vw; */
-  margin-top: 5vw;
-  margin-left: -15vw !important;
-}
-
-.GetQuote {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 3vw;
-}
-.GetQuote button {
-  cursor: pointer;
-  padding: 0.8vw 1vw;
-  border-radius: 50vw;
-  border: none;
-  font-size: 1vw;
-  color: white;
   font-weight: 500;
-  background-color: rgba(24, 34, 50, 1);
 }
-.GetQuote button:hover {
-  box-shadow: 2px 2px 100px 4px rgb(0 0 0 / 45%);
-  transition-duration: 0.2s;
+.Link{
+  color: rgba(0, 108, 113, 1);
+  /* padding: 0.5vw 0vw; */
+}
+
+.modalSection{
+  /* background-image:  url("../Assets//Images//aboutImg.svg"); */
+  background-color: red !important;
 }
